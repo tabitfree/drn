@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+//app components
+import ScrollToTop from "./components/ScrollToTop";
+import App from "./components/App";
+//css
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./assets/styles/style.css";
+//fonts
+import "./assets/fonts/Karla-Bold.ttf";
+import "./assets/fonts/Karla-Regular.ttf";
+import "./assets/fonts/Karla-SemiBold.ttf";
+import "./assets/fonts/IBMPlexSerif-Regular.ttf";
+import "./assets/fonts/IBMPlexSerif-SemiBold.ttf";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <BrowserRouter basename="/">
+    <ScrollToTop>
+      <App />
+    </ScrollToTop>
+  </BrowserRouter>,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
