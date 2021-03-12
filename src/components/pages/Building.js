@@ -8,21 +8,25 @@ import ExcellentCommunity from "../b-components/ExcellentCommunity";
 import Offices from "../hp-components/Offices";
 import Community from "../hp-components/Community";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Building = ({ colors }) => {
   const officeButton = (
     <Link to="/offices" className="btn dark-variant offices-btn">
-      See available offices
+      Explore offices
     </Link>
   );
 
   return (
     <>
+      <Helmet>
+        <title>DRN | Building</title>
+      </Helmet>
       <section className="hero hero-b">
         <Hero
           type="text"
           typeContent="DRN building"
-          title="Outside and in, DRN is simply one of the most beautiful office building imaginable today."
+          title="DRN is the Czech architectural masterpiece combining a modern building and historical baroque - renaissance palace."
           text=""
           colors={colors}
         />

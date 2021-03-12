@@ -34,7 +34,7 @@ const App = () => {
           <Contact />
         </Route>
         <Route path="/gastro">
-          <Gastro colors={colors} />
+          <Gastro colors={colors} width={width} />
         </Route>
         <Route path="/offices">
           <OfficesSection colors={colors} available={false} />

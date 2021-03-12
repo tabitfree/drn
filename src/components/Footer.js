@@ -23,32 +23,18 @@ const Footer = (props) => {
               style={
                 props.location.pathname == "/contact" ? { height: "623px" } : {}
               }
-            >
-              <div
-                className={
-                  props.location.pathname != "/contact"
-                    ? "w-50 footer-map"
-                    : "w-100 footer-map"
-                }
-                style={
-                  props.location.pathname == "/contact"
-                    ? { height: "623px" }
-                    : {}
-                }
-              ></div>
-            </a>
+            ></a>
             {props.location.pathname != "/contact" && (
               <div className="w-50 footer-contact">
                 <h2 style={{ color: colors.main }}>Contact us</h2>
                 <p style={{ color: colors.darkText, fontSize: "18px" }}>
-                  We would love to hear from you
+                  Would you like to become part of DRN community or learn more?
+                  <br />
+                  We look forward to hearing from you.
                 </p>
                 <p style={{ color: colors.darkButton }}>
-                  Interested in our office spaces?
-                  <br />
-                  Do you need more information?
-                  <br />
-                  We are here to answer all of your questions.
+                  Interested in our office spaces or do you need more
+                  information?
                 </p>
                 <Link to="/contact" className="btn dark-variant">
                   Contact
@@ -63,30 +49,27 @@ const Footer = (props) => {
               target="_blank"
               className="w-100 footer-map"
               style={{ height: "300px" }}
-            >
-              <div
-                className="w-100 footer-map"
-                style={{ height: "300px" }}
-              ></div>
-            </a>
-            <div className="w-100 footer-contact">
-              <Container>
-                <h2 style={{ color: colors.main }}>Contact us</h2>
-                <p style={{ color: colors.darkText, fontSize: "18px" }}>
-                  We would love to hear from you
-                </p>
-                <p style={{ color: colors.darkButton }}>
-                  Interested in our office spaces?
-                  <br />
-                  Do you need more information?
-                  <br />
-                  We are here to answer all of your questions.
-                </p>
-                <Link to="/contact" className="btn dark-variant">
-                  Contact
-                </Link>
-              </Container>
-            </div>
+            ></a>
+            {props.location.pathname != "/contact" ? (
+              <div className="w-100 footer-contact">
+                <Container>
+                  <h2 style={{ color: colors.main }}>Contact us</h2>
+                  <p style={{ color: colors.darkText, fontSize: "18px" }}>
+                    Would you like to become part of DRN community or learn
+                    more? We look forward to hearing from you.
+                  </p>
+                  <p style={{ color: colors.darkButton }}>
+                    Interested in our office spaces or do you need more
+                    information?
+                  </p>
+                  <Link to="/contact" className="btn dark-variant">
+                    Contact
+                  </Link>
+                </Container>
+              </div>
+            ) : (
+              <></>
+            )}
           </>
         )}
       </div>

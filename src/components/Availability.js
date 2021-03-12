@@ -29,12 +29,11 @@ const Availability = (props) => {
         {!available ? (
           <div className="d-flex flex-column">
             <p className="text-center">
-              Unfortunately, there are no offices available to rent at this
+              Unfortunately, there are no offices available for rent at this
               moment. We are more than happy to answer any question regarding
-              the office rental or the building in general. Plus, you are more
-              than welcome to come and join us in one of our prestigious
-              gastronomy options and check out the astonishing view from the
-              rooftop yourself.
+              the office rental or the building in general. In addition you are
+              welcome to explore the We Work community and possibly join their
+              office spaces.
             </p>
             <Link to="/contact" className="btn dark-variant ml-auto mr-auto">
               Contact

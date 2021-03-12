@@ -5,7 +5,7 @@ var cors = require("cors");
 const creds = require("./config");
 
 var transport = {
-  host: "smtp.example.com", // Don’t forget to replace with the SMTP host of your provider
+  host: "smtp.gmail.com", // Don’t forget to replace with the SMTP host of your provider
   port: 587,
   auth: {
     user: creds.USER,
@@ -26,13 +26,13 @@ transporter.verify((error, success) => {
 router.post("/send", (req, res, next) => {
   var name = req.body.name;
   var email = req.body.email;
+  var number = req.body.number;
   var message = req.body.message;
-  var content = `name: ${name} \n email: ${email} \n message: ${message} `;
+  var content = `name: ${name} \n email: ${email} \n message: ${message} \n number: ${number} `;
 
   var mail = {
     from: name,
-    to: "RECEIVING_EMAIL_ADDRESS_GOES_HERE", // Change to email address that you want to receive messages on
-    subject: "New Message from Contact Form",
+    to: creds.USER,
     text: content,
   };
 

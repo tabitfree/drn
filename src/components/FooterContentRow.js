@@ -17,10 +17,10 @@ const FooterContentRow = ({ width }) => {
       <Row>
         <div className="pl-0 mb-4">
           <p style={{ color: colors.light }}>
-            Representing a premium multi – functional hub in the heart of
-            Prague. The unique compound of modern office building and historical
-            baroque - renaissance palace works its own magic and without any
-            doubt makes it a modern Czech architectural masterpiece.
+            The place for business and inspiration representing a premium multi
+            – functional hub in the heart of Prague. The Czech architectural
+            masterpiece combining a modern building and historical baroque -
+            renaissance palace.
           </p>
         </div>
         <div className="d-flex w-100 list-group-wrapper">
@@ -117,9 +117,7 @@ const FooterContentRow = ({ width }) => {
             <br />
             Národní 135/14
             <br />
-            110 00 Staré Město
-            <br />
-            Praha
+            110 00 Prague 1 - New Town
           </p>
         </Col>
       </Row>
@@ -128,10 +126,10 @@ const FooterContentRow = ({ width }) => {
     <Row>
       <Col className="pl-0 col-4">
         <p style={{ color: colors.light }}>
-          Representing a premium multi – functional hub in the heart of Prague.
-          The unique compound of modern office building and historical baroque -
-          renaissance palace works its own magic and without any doubt makes it
-          a modern Czech architectural masterpiece.
+          The place for business and inspiration representing a premium multi –
+          functional hub in the heart of Prague. The Czech architectural
+          masterpiece combining a modern building and historical baroque -
+          renaissance palace.
         </p>
       </Col>
       <Col>
@@ -199,9 +197,7 @@ const FooterContentRow = ({ width }) => {
           <br />
           Národní 135/14
           <br />
-          110 00 Staré Město
-          <br />
-          Praha
+          110 00 Prague 1 - New Town
         </p>
       </Col>
     </Row>

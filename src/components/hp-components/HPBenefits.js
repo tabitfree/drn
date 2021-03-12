@@ -14,7 +14,7 @@ const HPBenefits = (props) => {
     {
       cardImg: "./images/benefits-2.png",
       cardTitle: "Gastronomy",
-      cardText: "The most exquisite gastronomy options you can find in Prague.",
+      cardText: "From morning coffee through afternoon beer to evening dining.",
       cardLink: "Explore gastronomy",
     },
   ];

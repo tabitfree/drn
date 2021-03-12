@@ -10,10 +10,11 @@ const About = ({ colors }) => {
           <p>The scope</p>
           <ul>
             <li>11,600 m2 of leased space</li>
-            <li>9,500 m²office space</li>
+            <li>9,500 m² office space</li>
             <li>4 underground floors</li>
+            <li>96 parking places</li>
             <li>8 floors</li>
-            <li>rooftop garden</li>
+            <li>rooftop terrace</li>
           </ul>
           <p>
             The project was executed by the developer company SEBRE who bought a

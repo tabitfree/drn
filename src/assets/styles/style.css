@@ -63,7 +63,7 @@ p,
 span {
   font-family: "KarlaRegular";
   font-size: 16px;
-  line-height: 19px;
+  line-height: 26px;
   color: #201a17;
 }
 
@@ -341,6 +341,10 @@ section.benefits-hp {
   margin-bottom: 27px;
 }
 
+.card-body-com-item img.card-img-icon {
+  max-height: 30px;
+}
+
 .benefits-content-wrapper .card-title {
   margin-bottom: 13px;
 }
@@ -410,8 +414,13 @@ section.community {
 
 .community-carousel .card-body {
   height: 100%;
-  max-height: 282px !important;
-  min-height: 282px;
+  max-height: 328px !important;
+  min-height: 328px;
+}
+
+.community-carousel .card-body img {
+  max-height: 30px;
+  max-height: 30px;
 }
 
 .community-carousel .react-multi-carousel-list {
@@ -443,11 +452,11 @@ section.community {
 }
 
 .community-carousel .react-multiple-carousel__arrow--left {
-  left: 42%;
+  left: 39%;
 }
 
 .community-carousel .react-multiple-carousel__arrow--right {
-  right: 43%;
+  right: 40%;
 }
 
 nav.position-absolute.w-100.navbar.navbar-expand.navbar-light.bg-transparent {
@@ -600,7 +609,8 @@ section.sfzone {
   margin-right: 78px;
 }
 
-.places-container div.ml-auto {
+.places-container div.ml-auto,
+.places-container div.mr-auto {
   max-width: 435px;
 }
 
@@ -694,7 +704,7 @@ section.sfzone {
 }
 
 .unique-cards .card:not(:last-child) {
-  margin-right: 84px;
+  margin-right: 54px;
 }
 
 section.upae h2 {
@@ -1044,7 +1054,13 @@ label.form-label {
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("../images/hamburger.png");
+  background-image: url("../images/hamburger.svg");
+  transition: all 0.2s ease;
+}
+
+.navbar-light .expanded-toggler .navbar-toggler-icon {
+  background-image: url("../images/cancel.svg");
+  transition: all 0.2s ease;
 }
 
 .card-body-com-item {
@@ -1131,6 +1147,41 @@ p.person-function {
   color: #c29955 !important;
 }
 
+a.w-50.footer-map {
+  transition: all 0.4s ease;
+}
+
+a.w-50.footer-map:hover {
+  transform: scale(1.05);
+}
+
+.footer > .d-flex {
+  overflow: hidden;
+}
+
+.contact-info-item p:hover {
+  color: #c29955;
+}
+
+.navbar-collapse > div {
+  margin-left: auto;
+}
+
+.connectivity {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.contact-info-item.d-flex.align-items-center p:hover {
+  color: #201a17;
+  cursor: default;
+}
+.connectivity-wrapper {
+  width: 59.5%;
+}
+
 /*- Media query ------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 1200px) {
@@ -1146,6 +1197,14 @@ p.person-function {
     width: calc(25% - 25px);
     margin-right: 30px;
   }
+
+  .community-carousel .react-multiple-carousel__arrow--right {
+    right: 37%;
+  }
+
+  .community-carousel .react-multiple-carousel__arrow--left {
+    left: 36%;
+  }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -1156,6 +1215,18 @@ p.person-function {
     margin-left: 15px;
   }
 }
+
+@media only screen and (min-width: 991px) {
+  .benefits-container > div.benefits-left {
+    margin-right: 20px;
+    width: calc(33% - 20px);
+  }
+  .benefits-container > div.d-flex {
+    width: calc(66%);
+  }
+}
+
+/* 991 ---------------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 991px) {
   .hero-cont {
@@ -1169,9 +1240,6 @@ p.person-function {
 
   .navbar-collapse {
     background: #fff;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    margin-top: 22px;
     z-index: 100;
   }
 
@@ -1202,6 +1270,13 @@ p.person-function {
     text-align: end;
   }
 
+  .navbar-nav {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-top: solid #000 1px;
+    margin-top: 20px;
+  }
+
   a.nav-link::before {
     background-color: #000;
   }
@@ -1216,6 +1291,7 @@ p.person-function {
 
   .offices-hp-inner .w-33 {
     width: 50% !important;
+    margin-bottom: 20px;
   }
 
   .office-carousel {
@@ -1233,11 +1309,11 @@ p.person-function {
   }
 
   .community-carousel .react-multiple-carousel__arrow--left {
-    left: 38%;
+    left: 33%;
   }
 
   .community-carousel .react-multiple-carousel__arrow--right {
-    right: 40%;
+    right: 35%;
   }
 
   .card-body-com-item {
@@ -1257,7 +1333,7 @@ p.person-function {
     width: 50%;
   }
   .unique-cards .card {
-    width: calc(50% - 42px) !important;
+    width: calc(50% - 27px) !important;
     margin-top: 30px;
   }
 
@@ -1316,11 +1392,6 @@ p.person-function {
   .bigger-container.img-right-type > img {
     margin-left: 0 !important;
   }
-
-  .bigger-container.img-right-type > div {
-    margin-left: auto;
-    text-align: right;
-  }
   .places-container p,
   .places-container .places-contact {
     margin-bottom: 32px;
@@ -1341,7 +1412,8 @@ p.person-function {
     padding-bottom: 50px;
   }
 
-  .bigger-container.img-left-type img {
+  .bigger-container.img-left-type img,
+  .bigger-container.img-right-type img {
     margin-bottom: 20px;
   }
 
@@ -1356,7 +1428,17 @@ p.person-function {
   .contact-form-wrapper {
     width: 100% !important;
   }
+
+  .connectivity-wrapper {
+    width: 100%;
+  }
+
+  .contact-info-item.d-flex.align-items-center {
+    flex-direction: row;
+  }
 }
+
+/* 767px ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 767px) {
   .hero-hp .w-40 {
@@ -1377,11 +1459,11 @@ p.person-function {
     max-height: 20px;
   }
   .community-carousel .react-multiple-carousel__arrow--left {
-    left: 34%;
+    left: 28%;
   }
 
   .community-carousel .react-multiple-carousel__arrow--right {
-    right: 36%;
+    right: 30%;
   }
 
   .footer {
@@ -1474,7 +1556,46 @@ p.person-function {
   .contact-card:nth-child(3n) {
     margin-right: 30px;
   }
+
+  section,
+  div[title="History and architecture"],
+  div[title="Architecture"] {
+    margin-bottom: 50px;
+  }
+  section.offices {
+    margin-bottom: 75px;
+  }
+  section.ex-community {
+    margin-bottom: 25px;
+  }
+  section.benefits-hp {
+    padding: 50px 0 50px;
+  }
+  section.community {
+    margin-bottom: 135px;
+  }
+  .architecture-container .arch-imgs {
+    margin-bottom: 50px;
+  }
+  .upae-cont > .w-50 > p {
+    margin-bottom: 0px;
+  }
+  section.sfzone .container > div > p {
+    margin-bottom: 30px;
+  }
+  .mb-64 {
+    margin-bottom: 32px;
+  }
+  .ex-community .container > .w-50 {
+    width: 100% !important;
+  }
+
+  .footer > .d-flex {
+    flex-direction: column;
+  }
 } /* end of 700 */
+
+/* 576px ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 576px) {
   section.benefits-hp {
@@ -1500,17 +1621,31 @@ p.person-function {
     width: unset !important;
   }
 
-  .ex-community .container > .w-50 {
-    width: 100% !important;
+  .card.border-white .card-body .card-img-icon {
+    margin-bottom: 15px;
+  }
+
+  section.benefits-hp {
+    padding: 50px 0 0;
+  }
+  section.hero-g {
+    margin-bottom: 200px;
   }
 }
 
+/* 485px ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 @media only screen and (max-width: 485px) {
   .community-carousel .react-multiple-carousel__arrow--left {
-    left: 28%;
+    left: 22%;
   }
   .community-carousel .react-multiple-carousel__arrow--right {
-    right: 32%;
+    right: 26%;
+  }
+  .office-carousel .react-multiple-carousel__arrow--right {
+    width: 18px;
+    height: 15px;
+    left: 10%;
   }
   .container.awards-container h2 {
     margin-bottom: 30px;
@@ -1552,6 +1687,18 @@ p.person-function {
   }
 }
 
+@media only screen and (max-width: 420px) {
+  section.hero {
+    margin-bottom: 370px;
+  }
+
+  section.hero-g {
+    margin-bottom: 250px;
+  }
+}
+
+/* 380px ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 @media only screen and (max-width: 380px) {
   .contact-card {
     width: 100%;
@@ -1560,5 +1707,11 @@ p.person-function {
   .contact-people-cont h2 {
     margin-bottom: 58px;
     text-align: center;
+  }
+  .community-carousel .react-multiple-carousel__arrow--right {
+    right: 21%;
+  }
+  .community-carousel .react-multiple-carousel__arrow--left {
+    left: 18%;
   }
 }

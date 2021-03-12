@@ -9,8 +9,8 @@ const Offices = ({ colors, button }) => {
       <div className="w-33">
         <h2 style={{ color: colors.main }}>DRN Offices</h2>
         <p>
-          DRN offers a wide variety of offices ranging from X to Y m², which
-          accommodates business of all kinds and sizes.
+          DRN offers over 9800 m² of premium Grade A office space that
+          accommodates high-profile occupiers.
         </p>
         {button}
       </div>

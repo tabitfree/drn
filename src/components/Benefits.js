@@ -5,8 +5,50 @@ import { Container } from "react-bootstrap";
 const Benefits = ({ colors }) => {
   const benefitsCards = [
     {
-      title: "Rooftop garden",
-      text: "Green oasis with the most astonishing views.",
+      title: "Design",
+      text: "Highly representative and modern.",
+      icon: "./images/benefits-1a.png",
+      iconWidth: "20px",
+      iconHeight: "35px",
+    },
+    {
+      title: "Variety",
+      text: "Offices with flexible floor layout that suit any business",
+      icon: "./images/benefits-1a.png",
+      iconWidth: "20px",
+      iconHeight: "35px",
+    },
+    {
+      title: "Security",
+      text: "CCTV, ACS access system, daily reception, security 24/7",
+      icon: "./images/benefits-1a.png",
+      iconWidth: "20px",
+      iconHeight: "35px",
+    },
+    {
+      title: "Location",
+      text: "Situated in the heart of Prague with excellent accessibility",
+      icon: "./images/benefits-1a.png",
+      iconWidth: "20px",
+      iconHeight: "35px",
+    },
+    {
+      title: "Parking",
+      text: "4 underground floors with 96 parking places",
+      icon: "./images/benefits-1a.png",
+      iconWidth: "20px",
+      iconHeight: "35px",
+    },
+    {
+      title: "Cycle and changing facilities",
+      text: "Bike storage and locker rooms available for tenants",
+      icon: "./images/benefits-1a.png",
+      iconWidth: "20px",
+      iconHeight: "35px",
+    },
+    {
+      title: "Courtyard",
+      text: "Central communal meeting point",
       icon: "./images/benefits-1a.png",
       iconWidth: "20px",
       iconHeight: "35px",
@@ -19,29 +61,15 @@ const Benefits = ({ colors }) => {
       iconHeight: "35px",
     },
     {
-      title: "Location",
-      text: "Situated in the heart of Prague.",
+      title: "Rooftop terrace",
+      text: "Green oasis with the most astonishing views.",
       icon: "./images/benefits-1a.png",
       iconWidth: "20px",
       iconHeight: "35px",
     },
     {
       title: "Community",
-      text: "Learn more about people in DRN.",
-      icon: "./images/benefits-1a.png",
-      iconWidth: "20px",
-      iconHeight: "35px",
-    },
-    {
-      title: "Design",
-      text: "Highly representative and modern.",
-      icon: "./images/benefits-1a.png",
-      iconWidth: "20px",
-      iconHeight: "35px",
-    },
-    {
-      title: "Variety",
-      text: "Offices of all sizes that suit any business.",
+      text: "Learn more about businesses in DRN",
       icon: "./images/benefits-1a.png",
       iconWidth: "20px",
       iconHeight: "35px",
@@ -53,9 +81,8 @@ const Benefits = ({ colors }) => {
       <div className="benefits-left">
         <h2 style={{ color: colors.main }}>Benefits</h2>
         <p>
-          We are offering a fully furnished office spaces with full service –
-          reception, cleaning services, I.T. support, assistant services, post
-          services, gastronomy, and many other available benefits.
+          DRN offers variety of benefits including the prime location in the
+          heart of Prague that enhances its connectivity.
         </p>
         <Link to="/building" className="btn dark-variant">
           Explore DRN building

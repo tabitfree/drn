@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const CommunityCarouselItem = (props) => {
   return (
@@ -19,7 +20,9 @@ const CommunityCarouselItem = (props) => {
             marginBottom: "12px",
           }}
         >
-          {props.website}
+          <a href={`https://${props.website}`} target="_blank">
+            {props.website}
+          </a>
         </Card.Title>
         <Card.Text
           style={{

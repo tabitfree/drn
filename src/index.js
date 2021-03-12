@@ -14,7 +14,7 @@ import "./assets/fonts/IBMPlexSerif-Regular.ttf";
 import "./assets/fonts/IBMPlexSerif-SemiBold.ttf";
 
 ReactDOM.render(
-  <BrowserRouter basename="/">
+  <BrowserRouter basename="/drn">
     <ScrollToTop>
       <App />
     </ScrollToTop>

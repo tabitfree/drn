@@ -32,7 +32,7 @@ const ContactForm = () => {
     e.preventDefault();
     axios({
       method: "POST",
-      url: "/contact",
+      url: "/send",
       data: {
         name: name,
         email: email,

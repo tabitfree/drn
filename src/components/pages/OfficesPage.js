@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import Offices from "../hp-components/Offices";
 import Benefits from "../Benefits";
@@ -21,6 +22,9 @@ const OfficesSection = (props) => {
 
   return (
     <>
+      <Helmet>
+        <title>DRN | Offices</title>
+      </Helmet>
       <section className="offices">
         <Offices colors={colors} button={officesButton} />
       </section>

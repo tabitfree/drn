@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 import { Container } from "react-bootstrap";
 import colors from "../../assets/styles/colors";
@@ -12,12 +13,15 @@ import { Link } from "react-router-dom";
 const HomePage = (props) => {
   const officesButton = (
     <Link to="/offices" className="btn dark-variant office-btn">
-      See available offices
+      Explore offices
     </Link>
   );
 
   return (
     <>
+      <Helmet>
+        <title>DRN | Home</title>
+      </Helmet>
       <section className="hero-hp">
         <HPHero colors={colors} />
       </section>

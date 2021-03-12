@@ -42,7 +42,7 @@ const ContactPeople = () => {
 
   return (
     <Container className="contact-people-cont">
-      <h2>Who is behind the scenes in DRN?</h2>
+      <h2>Who is there to attend you?</h2>
       <div className="contact-cards-wrapper d-flex flex-wrap">
         {people.map((person, idx) => (
           <Card

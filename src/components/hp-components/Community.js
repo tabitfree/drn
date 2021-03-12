@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import { Container } from "react-bootstrap";
 import CommunityCarousel from "../content/CommunityCarousel";
@@ -8,7 +9,8 @@ const Community = (props) => {
     <Container>
       <h2 style={{ color: props.colors.main }}>DRN community feedback</h2>
       <p style={{ color: props.colors.darkText }}>
-        Over 20 companies enjoy our multipurpose building on regular basis.{" "}
+        Over dozens of companies and entrepreneurs enjoy the benefits of our
+        multipurpose building on regular basis.
         <br />
         Learn their DRN experience below.
       </p>

@@ -1,21 +1,24 @@
 import React from "react";
 
-const Places = ({ colors }) => {
+const Places = ({ colors, width }) => {
   return (
     <>
       <div className="bigger-container img-left-type position-relative d-flex">
         <img src="./images/places-1.jpg" />
         <div className="d-flex places-container">
-          <div className="ml-auto">
+          <div className={width > 991 ? "ml-auto" : "mr-auto"}>
             <h2 style={{ color: colors.main }}>L’Osteria</h2>
             <p>
-              One of the most prestigious Italian cuisine known for its real
-              authenticity of their food. Only the first bite of their
-              traditional Italian pizza will carry you to the small streets of
-              Rome or gondola in Venice. If you are a fan of good quality food
-              this is the place to go to. Welcoming environment makes it a
-              perfect option for business meeting as well as non-formal friends
-              or family reunion.
+              Once the doors open at L’Osteria, you will feel like you are in a
+              typical Italian osteria, where people get together to eat really
+              well and enjoy the company of families, friends, couples, old and
+              young. It is a lively atmosphere, and the delicious smell of
+              authentic Italian cuisine lingers in the air. This is an open,
+              welcoming place, where everyone can be themselves and feel at
+              home. L’Osteria is famous for the best, best pizza and pasta
+              d’amore. The sizeable pizza is larger than the plate. It is
+              frequently ordered by two persons with different toppings on each
+              half. And wait until you see the pasta!
             </p>
             <p>To book a table visit losteria.net</p>
             <a href="https://www.losteria.net" className="btn dark-variant">
@@ -25,17 +28,17 @@ const Places = ({ colors }) => {
         </div>
       </div>
       <div className="bigger-container img-right-type position-relative d-flex">
+        {width <= 991 && <img src="./images/places-2.jpg" />}
         <div className="d-flex places-container">
-          <div className="ml-auto">
+          <div className={width > 991 ? "ml-auto" : "mr-auto"}>
             <h2 style={{ color: colors.main }}>U Rarášků</h2>
             <p>
-              If you are looking for a great place to relax after work or to
-              organize an informal meeting, this is it. This cozy wine pub is
-              well-known for its friendly atmosphere. It is proofed by the long
-              history behind this small business. It has already been a place
-              for reunions of well - known artists, actors and writers
-              (including Vaclav Havel) since the 70’s. Come and enjoy a nice
-              glass of wine or typical Czech crafted beer and live the moment.
+              A pub of Pilsner beer awarded the highest mark of quality - the
+              Star of Brewers - awaits you with a carefully selected offer of
+              drinks and farm specialties. The uniqueness of this place is
+              evidenced by its long history and the gathering of famous artists,
+              actors and writers (including Václav Havel) from the 70s. Come and
+              enjoy a typical Czech craft beer and experience the moments.
             </p>
             <div className="places-contact">
               <a href="tel:+420222101210" className="d-flex">
@@ -52,19 +55,19 @@ const Places = ({ colors }) => {
             </a>
           </div>
         </div>
-        <img src="./images/places-2.jpg" />
+        {width > 991 && <img src="./images/places-2.jpg" />}
       </div>
       <div className="bigger-container img-left-type position-relative d-flex">
         <img src="./images/places-3.jpg" />
         <div className="d-flex places-container">
-          <div className="ml-auto">
+          <div className={width > 991 ? "ml-auto" : "mr-auto"}>
             <h2 style={{ color: colors.main }}>DRN café</h2>
             <p>
               Business life and coffee are inseparable. And we completely
               understand it. That is why we bring you the certified high-quality
-              coffee of the Italian producer Filicori Zecchini. Homemade deserts
-              and delicious breakfasts will certainly make your start of the day
-              a little smoother.
+              coffee of the Italian producer Filicori Zecchini. Homemade
+              desserts and delicious breakfasts will certainly make your start
+              of the day a little smoother.
             </p>
             <div className="places-contact">
               <a href="tel:+420607441332" className="d-flex">
