@@ -1,27 +1,24 @@
-import React from "react";
-import { Row, Col, ListGroup, ListGroupItem } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import colors from "../assets/styles/colors";
+import React from 'react'
+import { Row, Col, ListGroup, ListGroupItem } from 'react-bootstrap'
+import { Trans, useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+import colors from '../assets/styles/colors'
 
 const FooterContentRow = ({ width }) => {
+  const { t } = useTranslation(['footer', 'menu'])
   const pages = [
-    "Homepage",
-    "Offices",
-    "Rooftop",
-    "Gastro",
-    "Building",
-    "Contact",
-  ];
+    t('menu:homepage'),
+    t('menu:building'),
+    t('menu:offices'),
+    t('menu:rooftop'),
+    t('menu:gastro'),
+    t('menu:contact'),
+  ]
   return width < 767 ? (
     <Row>
       <Row>
         <div className="pl-0 mb-4">
-          <p style={{ color: colors.light }}>
-            The place for business and inspiration representing a premium multi
-            – functional hub in the heart of Prague. The Czech architectural
-            masterpiece combining a modern building and historical baroque -
-            renaissance palace.
-          </p>
+          <p style={{ color: colors.light }}>{t('footer:para')}</p>
         </div>
         <div className="d-flex w-100 list-group-wrapper">
           <ListGroup className="mr-auto w-50">
@@ -36,16 +33,16 @@ const FooterContentRow = ({ width }) => {
                 <p
                   style={{
                     color: colors.light,
-                    fontSize: "16px",
-                    lineHeight: "18.7px",
+                    fontSize: '16px',
+                    lineHeight: '18.7px',
                   }}
                 >
                   <Link
-                    to={page == "Homepage" ? "/" : `/${page.toLowerCase()}`}
+                    to={page == 'Homepage' ? '/' : `/${page.toLowerCase()}`}
                     className="mb-0"
                     style={{ color: colors.light }}
                   >
-                    {page}
+                    {page.toUpperCase()}
                   </Link>
                 </p>
               </ListGroupItem>
@@ -63,16 +60,16 @@ const FooterContentRow = ({ width }) => {
                 <p
                   style={{
                     color: colors.light,
-                    fontSize: "16px",
-                    lineHeight: "18.7px",
+                    fontSize: '16px',
+                    lineHeight: '18.7px',
                   }}
                 >
                   <Link
-                    to={page == "Homepage" ? "/" : `/${page.toLowerCase()}`}
+                    to={page == 'Homepage' ? '/' : `/${page.toLowerCase()}`}
                     className="mb-0"
                     style={{ color: colors.light }}
                   >
-                    {page}
+                    {page.toUpperCase()}
                   </Link>
                 </p>
               </ListGroupItem>
@@ -84,40 +81,40 @@ const FooterContentRow = ({ width }) => {
         <Col className="footer-social">
           <p className="text-uppercase footer-contact-small-wrapper">
             <a
-              href="mailto:info@drn.com"
+              href="mailto:info@drn.cz"
               style={{
                 color: colors.light,
               }}
             >
-              info@drn.com
+              info@drn.cz
             </a>
           </p>
           <p className="footer-contact-small-wrapper">
             <a
-              href="tel:+420764890443"
+              href="tel:+420242434200"
               style={{
                 color: colors.light,
               }}
             >
-              +420 764 890 443
+              +420 242 434 200
             </a>
           </p>
-          <a href="https://www.facebook.com/drn-prague" target="_blank">
+          <a
+            href="https://www.instagram.com/explore/tags/drnprague/"
+            className="display-inline"
+            target="_blank"
+          >
             <div className="d-flex align-items-center">
-              <img src="./images/fb-icon-white.png" />
+              <img src="./images/instagram.svg" width="25px" />
               <p style={{ color: colors.light }} className="mb-0">
-                /drn-prague
+                #drnprague
               </p>
             </div>
           </a>
         </Col>
         <Col className="footer-address">
           <p style={{ color: colors.light }}>
-            DRN building
-            <br />
-            Národní 135/14
-            <br />
-            110 00 Prague 1 - New Town
+            <Trans>{t('address')}</Trans>
           </p>
         </Col>
       </Row>
@@ -125,12 +122,7 @@ const FooterContentRow = ({ width }) => {
   ) : (
     <Row>
       <Col className="pl-0 col-4">
-        <p style={{ color: colors.light }}>
-          The place for business and inspiration representing a premium multi –
-          functional hub in the heart of Prague. The Czech architectural
-          masterpiece combining a modern building and historical baroque -
-          renaissance palace.
-        </p>
+        <p style={{ color: colors.light }}>{t('footer:para')}</p>
       </Col>
       <Col>
         <ListGroup className="mr-auto ml-auto">
@@ -145,12 +137,12 @@ const FooterContentRow = ({ width }) => {
               <p
                 style={{
                   color: colors.light,
-                  fontSize: "16px",
-                  lineHeight: "18.7px",
+                  fontSize: '16px',
+                  lineHeight: '18.7px',
                 }}
               >
                 <Link
-                  to={page == "Homepage" ? "/" : `/${page.toLowerCase()}`}
+                  to={page == 'Homepage' ? '/' : `/${page.toLowerCase()}`}
                   className="mb-0"
                   style={{ color: colors.light }}
                 >
@@ -164,44 +156,44 @@ const FooterContentRow = ({ width }) => {
       <Col className="footer-social">
         <p className="text-uppercase footer-contact-small-wrapper">
           <a
-            href="mailto:info@drn.com"
+            href="mailto:info@drn.cz"
             style={{
               color: colors.light,
             }}
           >
-            info@drn.com
+            info@drn.cz
           </a>
         </p>
         <p className="footer-contact-small-wrapper">
           <a
-            href="tel:+420764890443"
+            href="tel:+420242434200"
             style={{
               color: colors.light,
             }}
           >
-            +420 764 890 443
+            +420 242 434 200
           </a>
         </p>
-        <a href="https://www.facebook.com/drn-prague" target="_blank">
+        <a
+          href="https://www.instagram.com/explore/tags/drnprague/"
+          className="d-inline-block footer-fb"
+          target="_blank"
+        >
           <div className="d-flex align-items-center">
-            <img src="./images/fb-icon-white.png" />
+            <img src="./images/instagram.svg" width="25px" />
             <p style={{ color: colors.light }} className="mb-0">
-              /drn-prague
+              #drnprague
             </p>
           </div>
         </a>
       </Col>
       <Col className="footer-address">
         <p style={{ color: colors.light }}>
-          DRN building
-          <br />
-          Národní 135/14
-          <br />
-          110 00 Prague 1 - New Town
+          <Trans>{t('address')}</Trans>
         </p>
       </Col>
     </Row>
-  );
-};
+  )
+}
 
-export default FooterContentRow;
+export default FooterContentRow

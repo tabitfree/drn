@@ -1,25 +1,42 @@
 {
   "short_name": "DRN",
-  "name": "DRN building",
+  "name": "DRN",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
     }
   ],
   "display": "standalone",
-  "start_url": ".",
+  "start_url": "/",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "shortcuts": [
+    {
+      "name": "Building",
+      "url": "/building",
+      "description": "Go to DRN Building"
+    },
+    {
+      "name": "Rooftop",
+      "url": "/rooftop",
+      "description": "Go to DRN Rooftop"
+    },
+    {
+      "name": "Offices",
+      "url": "/offices",
+      "description": "Go to DRN Offices"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact",
+      "description": "Go to DRN Contact"
+    },
+    {
+      "name": "Gastro",
+      "url": "/gastro",
+      "description": "Go to DRN Gastro"
+    }
+  ]
 }

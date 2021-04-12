@@ -1,0 +1,22 @@
+{
+  "contactTi": "Contact information",
+  "contactTe": "We look forward to hearing from you or you could visit us at DRN.",
+  "contactAddress": "DRN Building<br/>Národní 135/14<br/>110 00 Prague 1 - New Town",
+  "contactConnectivity": "Connectivity",
+  "parking": "Direct access to underground parking from Mikulandská Street",
+  "publicTransport": "Easily accessible with the fully integrated Prague public transport. Subway Line A, trams and buses - Národní třída station.",
+  "airport": "Accessible from airport by car (30 min) or a public transport (45 min)",
+  "subway": "Accessible from main train station by car (6 min) or a public transport (15 min)",
+  "formTi": "Interested in our office spaces?<br/>Having any thoughts, doubts or questions?<br/>Let us know!",
+  "formName": "Full name*",
+  "formMail": "E-mail address*",
+  "number": "Phone number",
+  "message": "Message*",
+  "conditions": "I agree to <a href=''><u>terms and conditions</u></a> regarding personal data",
+  "btn": "Send message",
+  "contactsTi": "Key contacts",
+  "contact1Function": "Property Management",
+  "contact2Function": "Asset Management",
+  "contact3Function": "Property Owner",
+  "messageSent": "Message has been successfully sent! Thank you for contacting us."
+}

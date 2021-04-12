@@ -1,21 +1,25 @@
-import React, { useState, useEffect } from "react";
-import Hero from "../Hero";
-import Unique from "../b-components/Unique";
-import Architecture from "../b-components/Architecture";
-import Awards from "../b-components/Awards";
-import About from "../b-components/About";
-import ExcellentCommunity from "../b-components/ExcellentCommunity";
-import Offices from "../hp-components/Offices";
-import Community from "../hp-components/Community";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import React, { useState, useEffect, useRef } from 'react'
+import Hero from '../Hero'
+import Unique from '../b-components/Unique'
+import Architecture from '../b-components/Architecture'
+import Awards from '../b-components/Awards'
+import About from '../b-components/About'
+import ExcellentCommunity from '../b-components/ExcellentCommunity'
+import Offices from '../hp-components/Offices'
+import Community from '../hp-components/Community'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
+import { useTranslation } from 'react-i18next'
+import ScrollAnimation from 'react-animate-on-scroll'
 
-const Building = ({ colors }) => {
+const Building = ({ colors, ...props }) => {
+  const { t } = useTranslation('building, homepage')
   const officeButton = (
     <Link to="/offices" className="btn dark-variant offices-btn">
-      Explore offices
+      {t('homepage:officesBtn')}
     </Link>
-  );
+  )
+  const comRef = useRef(null)
 
   return (
     <>
@@ -25,9 +29,8 @@ const Building = ({ colors }) => {
       <section className="hero hero-b">
         <Hero
           type="text"
-          typeContent="DRN building"
-          title="DRN is the Czech architectural masterpiece combining a modern building and historical baroque - renaissance palace."
-          text=""
+          title={t('building:heroTi')}
+          text={t('building:heroTe')}
           colors={colors}
         />
       </section>
@@ -38,30 +41,28 @@ const Building = ({ colors }) => {
         <Architecture colors={colors} />
       </section>
       <section className="awards">
-        <Awards colors={colors} />
+        <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+          <Awards colors={colors} />
+        </ScrollAnimation>
       </section>
       <section className="about">
         <About colors={colors} />
       </section>
-      <section className="ex-community">
+      <section className="ex-community" id="community-sec">
         <ExcellentCommunity
-          title="Excellent community"
-          text="Meet the companies that are currently based in DRN and find out how
-          they enjoy working with us. In DRN we aim to connect, develop, and
-          cooperate. That is why we enhance good relationship within the
-          community, because we are certain that even a short chit chat in the
-          elevator can lead to big ideas and successful business models."
+          title={t('building:excellentCommunityTi')}
+          text={t('building:excellentCommunityTe')}
           colors={colors}
         />
       </section>
       <section className="offices">
-        <Offices colors={colors} button={officeButton} />
+        <Offices colors={colors} button={officeButton} width={props.width} />
       </section>
       <section className="community">
         <Community colors={colors} />
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Building;
+export default Building

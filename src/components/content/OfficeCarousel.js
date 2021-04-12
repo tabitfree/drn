@@ -1,9 +1,11 @@
-import React from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import OfficeCarouselItem from "./OfficeCarouselItem";
+import React from 'react'
+import { useTranslation } from 'react-i18next'
+import Carousel from 'react-multi-carousel'
+import OfficeCarouselItem from './OfficeCarouselItem'
 
-const OfficeCarousel = (props) => {
+const OfficeCarousel = React.memo((props) => {
+  const { t } = useTranslation('homepage')
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1200 },
@@ -22,32 +24,73 @@ const OfficeCarousel = (props) => {
       partialVisibilityGutter: 20,
       slidesToSlide: 1,
     },
-  };
+  }
 
   let images = [
-    "./images/office1.png",
-    "./images/office2.png",
-    "./images/office3.png",
-    "./images/office2.png",
-    "./images/office1.png",
-  ];
+    './images/nano-energies.jpg',
+    './images/office5-min.png',
+    './images/aether-clinic-min.jpg',
+    './images/office3.png',
+    './images/office6-min.jpg',
+    './images/office7-min.jpg',
+  ]
 
   let titles = [
-    "Meeting Room",
-    "Emerald Lobby",
-    "Common Room",
-    "Meeting Room",
-    "Emerald Lobby",
-  ];
+    t('offices2Ti'),
+    t('offices5Ti'),
+    t('offices4Ti'),
+    t('offices3Ti'),
+    t('officesGeneralTi'),
+    t('officesGeneralTi'),
+  ]
 
   let subtitles = [
-    "New Palace",
-    "Schonkirch Palace",
-    "Schonkirch Palace",
-    "New Palace",
-    "New Palace",
-  ];
-
+    t('offices2Te'),
+    t('offices5Te'),
+    t('offices4Te'),
+    t('offices3Te'),
+    t('officesGeneralTe'),
+    t('officesGeneralTe'),
+  ]
+  
+  function CustomLeftArrow({ onClick, className }) {
+    return (
+      <button
+        onClick={() => onClick()}
+        className={`custom-arrow custom-arrow-left d-block ${className}`}
+      />
+    )
+  }
+  function CustomRightArrow({ onClick, className }) {
+    return (
+      <button
+        onClick={() => onClick()}
+        className={`custom-arrow custom-arrow-right d-block ${className}`}
+      />
+    )
+  }
+  const ButtonGroup = ({ next, previous, ...rest }) => {
+    const {
+      carouselState: { currentSlide },
+    } = rest
+    return (
+      <div className="carousel-button-group">
+        <CustomLeftArrow
+          className={currentSlide === 0 ? 'disable' : ''}
+          onClick={() => previous()}
+        />
+        <CustomRightArrow
+          onClick={() => next()}
+          className={
+            (props.width > 767 && currentSlide === images.length - 2) ||
+            (props.width <= 767 && currentSlide === images.length - 1)
+              ? 'disable'
+              : ''
+          }
+        />
+      </div>
+    )
+  }
   return (
     <Carousel
       ssr
@@ -56,8 +99,10 @@ const OfficeCarousel = (props) => {
       itemClass="item"
       containerClass="office-carousel"
       responsive={responsive}
-      renderButtonGroupOutside={true}
       transitionDuration={200}
+      arrows={false}
+      customLeftArrow={<CustomLeftArrow />}
+      customButtonGroup={<ButtonGroup />}
     >
       {images.map((image, idx) => {
         return (
@@ -68,10 +113,10 @@ const OfficeCarousel = (props) => {
             id={idx}
             key={idx}
           />
-        );
+        )
       })}
     </Carousel>
-  );
-};
+  )
+})
 
-export default OfficeCarousel;
+export default OfficeCarousel

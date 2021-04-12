@@ -1,67 +1,67 @@
-import React from "react";
-import { Card, Container } from "react-bootstrap";
+import React from 'react'
+import { Card, Container } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const ContactPeople = () => {
+  const { t } = useTranslation('contact')
   const people = [
     {
-      imgPath: "./images/person-contact1.png",
-      name: "Name Name",
-      function: "Media & PR",
-      tel: "+420 123 456 789",
-      mail: "name@mail.com",
+      imgPath: './images/sebre-logo.png',
+      name: 'David Bína',
+      function: t('contact1Function'),
+      web: 'www.sebre.cz',
+      mail: 'david.bina@sebre.cz',
     },
     {
-      imgPath: "./images/person-contact1.png",
-      name: "Name Name",
-      function: "Media & PR",
-      tel: "+420 123 456 789",
-      mail: "name@mail.com",
+      imgPath: './images/savills-logo.svg',
+      name: 'Michaela Semanová',
+      function: t('contact2Function'),
+      web: 'www.savills.cz',
+      mail: 'michaela.semanova@savills.cz',
     },
     {
-      imgPath: "./images/person-contact1.png",
-      name: "Name Name",
-      function: "Media & PR",
-      tel: "+420 123 456 789",
-      mail: "name@mail.com",
+      imgPath: './images/csm_logo.png',
+      name: 'KGAL GmbH & Co. KG',
+      function: t('contact3Function'),
+      web: 'www.kgal.de',
+      mail: 'kgal@kgal.de',
     },
-    {
-      imgPath: "./images/person-contact1.png",
-      name: "Name Name",
-      function: "Media & PR",
-      tel: "+420 123 456 789",
-      mail: "name@mail.com",
-    },
-    {
-      imgPath: "./images/person-contact1.png",
-      name: "Named Name",
-      function: "Media & PR",
-      tel: "+420 123 456 789",
-      mail: "name@mail.com",
-    },
-  ];
+  ]
 
   return (
     <Container className="contact-people-cont">
-      <h2>Who is there to attend you?</h2>
-      <div className="contact-cards-wrapper d-flex flex-wrap">
+      <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+        <h2>{t('contactsTi')}</h2>
+      </ScrollAnimation>
+      <ScrollAnimation
+        animateIn="fadeIn"
+        animateOnce={true}
+        className="contact-cards-wrapper d-flex flex-wrap justify-content-center"
+      >
         {people.map((person, idx) => (
           <Card
             key={idx}
-            className="contact-card d-flex flex-column align-items-center text-center"
+            className="contact-card d-flex flex-column align-items-center text-center flex-column justify-content-between flex-start"
           >
             <Card.Img
               src={person.imgPath}
-              style={{ width: "112px", height: "112px" }}
+              style={{ width: '100%', height: 'auto', maxHeight: '68.56px' }}
             />
             <p className="person-name">{person.name}</p>
             <p className="person-function">{person.function}</p>
-            <a href={`tel:${person.tel}`}>{person.tel}</a>
-            <a href={`mailto:${person.mail}`}>{person.mail}</a>
+            {person.function.length < 23 && <br className="mob-none" />}
+            <div className="d-flex flex-column">
+              <a href={`https://${person.web}`} target="_blank">
+                {person.web}
+              </a>
+              <a href={`mailto:${person.mail}`}>{person.mail}</a>
+            </div>
           </Card>
         ))}
-      </div>
+      </ScrollAnimation>
     </Container>
-  );
-};
+  )
+}
 
-export default ContactPeople;
+export default ContactPeople

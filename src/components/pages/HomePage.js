@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
+import { Container } from 'react-bootstrap'
+import colors from '../../assets/styles/colors'
 
-import { Container } from "react-bootstrap";
-import colors from "../../assets/styles/colors";
-
-import HPHero from "../hp-components/HPHero";
-import Offices from "../hp-components/Offices";
-import HPBenefits from "../hp-components/HPBenefits";
-import Community from "../hp-components/Community";
-import { Link } from "react-router-dom";
+import HPHero from '../hp-components/HPHero'
+import Offices from '../hp-components/Offices'
+import HPBenefits from '../hp-components/HPBenefits'
+import Community from '../hp-components/Community'
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const HomePage = (props) => {
+  const { t } = useTranslation('homepage')
   const officesButton = (
     <Link to="/offices" className="btn dark-variant office-btn">
-      Explore offices
+      {t('heroUnderlined')}
     </Link>
-  );
+  )
 
   return (
     <>
@@ -26,7 +27,7 @@ const HomePage = (props) => {
         <HPHero colors={colors} />
       </section>
       <section className="offices-hp">
-        <Offices colors={colors} button={officesButton} />
+        <Offices colors={colors} button={officesButton} width={props.width} />
       </section>
       <section className="benefits-hp">
         <HPBenefits colors={colors} width={props.width} />
@@ -35,7 +36,7 @@ const HomePage = (props) => {
         <Community colors={colors} />
       </section>
     </>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

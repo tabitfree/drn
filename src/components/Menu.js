@@ -1,32 +1,35 @@
-import React, { useState } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
-import { Link, withRouter } from "react-router-dom";
+import React, { useState } from 'react'
+import { Navbar, Nav, Container } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
+import { Link, withRouter } from 'react-router-dom'
 
 const Menu = (props) => {
-  const link = props.location.pathname;
-  const [expanded, setExpanded] = useState(false);
+  const { t } = useTranslation('menu')
+  const link = props.location.pathname
+  const [expanded, setExpanded] = useState(false)
+  const changeLanguage = props.changeLanguage
 
   const sectionStyle = (path, width) => {
     return width < 992
-      ? "menu-section-background menu-section mb-0 white-bg"
-      : path === "/offices" || path === "/contact"
-      ? "menu-section-background menu-section mb-0"
-      : "menu-section mb-0";
-  };
+      ? 'menu-section-background menu-section mb-0 white-bg'
+      : path === '/offices' || path === '/contact'
+      ? 'menu-section-background menu-section mb-0'
+      : 'menu-section mb-0'
+  }
 
   const navbarStyle = (width) => {
-    return width >= 576 ? "position-absolute w-100" : "position-relative w-100";
-  };
+    return width >= 576 ? 'position-absolute w-100' : 'position-relative w-100'
+  }
 
   const containerStyle = (width) => {
     return width >= 576
-      ? "position-relative transparent-container container"
-      : "position-absolute w-100";
-  };
+      ? 'position-relative transparent-container container'
+      : 'position-absolute w-100'
+  }
 
   const classNames = (path) => {
-    return link === path ? "px-3 cur-page nav-link" : "px-3 nav-link";
-  };
+    return link === path ? 'px-3 cur-page nav-link' : 'px-3 nav-link'
+  }
 
   return (
     <section className={sectionStyle(link, props.width)}>
@@ -37,70 +40,82 @@ const Menu = (props) => {
           expand="lg"
           expanded={expanded}
         >
-          <Link to="/" onClick={() => setExpanded(false)}>
-            <Navbar.Brand href="/">
-              <img
-                src={
-                  props.width > 991
-                    ? "./images/logo.svg"
-                    : "./images/logo-black.png"
-                }
-              />
-            </Navbar.Brand>
+          <Link
+            to="/"
+            onClick={() => setExpanded(false)}
+            className="navbar-brand"
+          >
+            <img
+              src={
+                props.width > 991
+                  ? './images/logo.svg'
+                  : './images/logo-black.png'
+              }
+            />
           </Link>
+
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             onClick={(e) => {
-              e.preventDefault();
-              setExpanded(expanded ? false : "expanded");
+              e.preventDefault()
+              setExpanded(expanded ? false : 'expanded')
             }}
-            className={!expanded ? "" : "expanded-toggler"}
+            className={!expanded ? '' : 'expanded-toggler'}
           />
           <Navbar.Collapse id="basic-navbar-nav">
             <div>
               <Nav className="ml-auto">
                 <Link
                   to="/building"
-                  className={classNames("/building")}
+                  className={classNames('/building')}
                   onClick={() => setExpanded(false)}
                 >
-                  Building
+                  {t('building')}
                 </Link>
                 <Link
                   to="/offices"
-                  className={classNames("/offices")}
+                  className={classNames('/offices')}
                   onClick={() => setExpanded(false)}
                 >
-                  Offices
+                  {t('offices')}
                 </Link>
                 <Link
                   to="/rooftop"
-                  className={classNames("/rooftop")}
+                  className={classNames('/rooftop')}
                   onClick={() => setExpanded(false)}
                 >
-                  Rooftop
+                  {t('rooftop')}
                 </Link>
                 <Link
                   to="/gastro"
-                  className={classNames("/gastro")}
+                  className={classNames('/gastro')}
                   onClick={() => setExpanded(false)}
                 >
-                  Gastro
+                  {t('gastro')}
                 </Link>
                 <Link
                   to="/contact"
-                  className={classNames("/contact")}
+                  className={classNames('/contact')}
                   onClick={() => setExpanded(false)}
                 >
-                  Contact
+                  {t('contact')}
                 </Link>
+                <a
+                  onClick={() => {
+                    let changeTo = props.curLang == 'en' ? 'cz' : 'en'
+                    changeLanguage(changeTo)
+                  }}
+                  className="px-3 nav-link"
+                >
+                  {props.curLang == 'en' ? 'cz' : 'en'}
+                </a>
               </Nav>
             </div>
           </Navbar.Collapse>
         </Navbar>
       </Container>
     </section>
-  );
-};
+  )
+}
 
-export default withRouter(Menu);
+export default withRouter(Menu)

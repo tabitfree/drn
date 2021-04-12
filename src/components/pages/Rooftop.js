@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
+import ScrollAnimation from 'react-animate-on-scroll'
 
-import Hero from "../Hero";
-import SFZone from "../rt-components/SFZone";
-import Community from "../hp-components/Community";
+import Hero from '../Hero'
+import SFZone from '../rt-components/SFZone'
+import Community from '../hp-components/Community'
+import { useTranslation } from 'react-i18next'
 
 const Rooftop = ({ colors }) => {
+  const { t } = useTranslation('rooftop')
   return (
     <>
       <Helmet>
@@ -14,8 +17,8 @@ const Rooftop = ({ colors }) => {
       <section className="hero-rt hero">
         <Hero
           typeContent="./images/benefits-1.png"
-          title="Rooftop Terrace"
-          text="Green oasis in the heart of Prague is one of the many unique benefits that DRN offers. It is modern, it is peaceful, and it has astonishing views of the city. Altogether it makes it a perfect place to relax or organize events of any kind."
+          title={t('heroTi')}
+          text={t('heroTe')}
           colors={colors}
           type="icon"
         />
@@ -27,7 +30,7 @@ const Rooftop = ({ colors }) => {
         <Community colors={colors} />
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Rooftop;
+export default Rooftop

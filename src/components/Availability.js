@@ -1,11 +1,14 @@
-import React from "react";
-import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import AvailableOffice from "./AvailableOffice";
-import offices from "../assets/offices";
+import React from 'react'
+import { Container } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import AvailableOffice from './AvailableOffice'
+import offices from '../assets/offices'
+import { useTranslation } from 'react-i18next'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const Availability = (props) => {
-  const available = props.available;
+  const available = props.available
+  const { t } = useTranslation('offices')
 
   const availableTitle =
     available && offices.length == 1 ? (
@@ -13,40 +16,43 @@ const Availability = (props) => {
     ) : available && offices.length > 1 ? (
       <h2>There are {offices.length} available offices</h2>
     ) : (
-      <h2>There are no available offices at the moment</h2>
-    );
+      <h2>{t('availabilityTi')}</h2>
+    )
 
   return (
     <Container
       className={
         !available
-          ? "availability-container-unavailable d-flex justify-content-center"
-          : "availability-container-available"
+          ? 'availability-container-unavailable d-flex justify-content-center'
+          : 'availability-container-available'
       }
     >
-      <div>
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
         {availableTitle}
         {!available ? (
           <div className="d-flex flex-column">
-            <p className="text-center">
-              Unfortunately, there are no offices available for rent at this
-              moment. We are more than happy to answer any question regarding
-              the office rental or the building in general. In addition you are
-              welcome to explore the We Work community and possibly join their
-              office spaces.
-            </p>
-            <Link to="/contact" className="btn dark-variant ml-auto mr-auto">
-              Contact
-            </Link>
+            <p className="text-left">{t('availabilityTe')}</p>
+            <div className="d-flex justify-content-start align-items-center offices-btn-wrap">
+              <Link to="/contact" className="btn dark-variant hp-btn">
+                {t('availabilityBtn')}
+              </Link>
+              <a
+                href="https://www.wework.com/buildings/drn--prague"
+                target="_blank"
+                className="underlined-btn dark-underlined "
+              >
+                {t('availabilityBtn2')}
+              </a>
+            </div>
           </div>
         ) : (
           offices.map((office, idx) => {
-            return <AvailableOffice office={office} key={idx} />;
+            return <AvailableOffice office={office} key={idx} />
           })
         )}
-      </div>
+      </ScrollAnimation>
     </Container>
-  );
-};
+  )
+}
 
-export default Availability;
+export default Availability

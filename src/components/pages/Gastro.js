@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
-import { Helmet } from "react-helmet";
+import React, { useState, useEffect } from 'react'
+import { Container } from 'react-bootstrap'
+import { Helmet } from 'react-helmet'
+import { useTranslation } from 'react-i18next'
 
-import Hero from "../Hero";
-import Community from "../hp-components/Community";
-import Places from "../Places";
+import Hero from '../Hero'
+import Community from '../hp-components/Community'
+import Places from '../Places'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const Gastro = ({ colors, width }) => {
+  const { t } = useTranslation('gastronomy')
   return (
     <>
       <Helmet>
@@ -15,26 +18,27 @@ const Gastro = ({ colors, width }) => {
       <section className="hero-g hero">
         <Hero
           typeContent="./images/benefits-2.png"
-          title="Gastronomy"
-          text="From morning coffee through afternoon beer to evening dining. Explore DRN gastronomy."
+          title={t('gastronomyTi')}
+          text={t('gastronomyTe')}
           colors={colors}
           type="icon"
         />
       </section>
       <Container
         style={
-          width > 767 ? { marginBottom: "123px" } : { marginBottom: "50px" }
+          width > 767 ? { marginBottom: '123px' } : { marginBottom: '50px' }
         }
       >
-        <div className={width > 580 ? "w-50" : "mr-auto"}>
-          <h2 style={{ color: colors.main }}>Perfect place to meet up</h2>
-          <p style={{ color: colors.darkText }}>
-            A brilliant choice for a meeting of any kind. Ranging from the
-            authentic Italian cuisine perfect for a meeting with your clients to
-            a pleasant glass of wine or crafted beer after work with your
-            colleagues. Experience the gastronomy of a pleasant courtyard
-            outside the bustling city center.
-          </p>
+        <div className={width > 580 ? 'w-50' : 'mr-auto'}>
+          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+            <h2 style={{ color: colors.main }}>{t('placeTi')}</h2>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInRight"
+            animateOnce={true}
+          >
+            <p style={{ color: colors.darkText }}>{t('placeTe')}</p>
+          </ScrollAnimation>
         </div>
       </Container>
       <section className="places position-relative">
@@ -44,7 +48,7 @@ const Gastro = ({ colors, width }) => {
         <Community colors={colors} />
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Gastro;
+export default Gastro

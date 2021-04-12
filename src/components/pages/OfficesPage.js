@@ -1,24 +1,26 @@
-import React, { useRef } from "react";
-import { Link, withRouter } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import React, { useRef } from 'react'
+import { Link, withRouter } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
-import Offices from "../hp-components/Offices";
-import Benefits from "../Benefits";
-import ExcellentCommunity from "../b-components/ExcellentCommunity";
-import Availability from "../Availability";
+import Offices from '../hp-components/Offices'
+import Benefits from '../Benefits'
+import ExcellentCommunity from '../b-components/ExcellentCommunity'
+import Availability from '../Availability'
+import { useTranslation } from 'react-i18next'
 
 const OfficesSection = (props) => {
-  const colors = props.colors;
-  const available = props.available;
+  const { t } = useTranslation('homepage, offices')
+  const colors = props.colors
+  const available = props.available
 
-  const avaRef = useRef(null);
-  const executeScroll = () => avaRef.current.scrollIntoView();
+  const avaRef = useRef(null)
+  const executeScroll = () => avaRef.current.scrollIntoView()
 
   const officesButton = (
     <div onClick={executeScroll} className="btn dark-variant office-btn">
-      See available offices
+      {t('homepage:officesBtn')}
     </div>
-  );
+  )
 
   return (
     <>
@@ -26,15 +28,15 @@ const OfficesSection = (props) => {
         <title>DRN | Offices</title>
       </Helmet>
       <section className="offices">
-        <Offices colors={colors} button={officesButton} />
+        <Offices colors={colors} button={officesButton} width={props.width} />
       </section>
       <section className="benefits">
         <Benefits colors={colors} />
       </section>
       <section className="ex-community">
         <ExcellentCommunity
-          title="Companies in DRN"
-          text="Learn more about the companies that are currently based in DRN. Find out more about them and their experience within the workspace."
+          title={t('offices:companiesTi')}
+          text={t('offices:companiesTe')}
           colors={colors}
         />
       </section>
@@ -42,7 +44,7 @@ const OfficesSection = (props) => {
         <Availability available={available} />
       </section>
     </>
-  );
-};
+  )
+}
 
-export default withRouter(OfficesSection);
+export default withRouter(OfficesSection)

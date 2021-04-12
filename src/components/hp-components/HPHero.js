@@ -2,26 +2,21 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 const HPHero = (props) => {
+  const { t } = useTranslation("homepage");
   return (
     <Container className="position-relative">
       <div className="w-40 pr-2">
-        <h1 style={{ color: props.colors.main }}>
-          DRN – a building that exceeds your expectations.
-        </h1>
-        <p style={{ color: props.colors.light }}>
-          The place for business and inspiration representing a premium multi –
-          functional hub in the heart of Prague. The Czech architectural
-          masterpiece combining a modern building and historical baroque -
-          renaissance palace.
-        </p>
-        <div className="d-flex align-items-center">
+        <h1 style={{ color: props.colors.main }}>{t("heroTitle")}</h1>
+        <p style={{ color: props.colors.light }}>{t("heroSubtitle")}</p>
+        <div className="d-flex align-items-center flex-wrap">
           <Link to="/building" className="btn light-variant hp-btn">
-            DRN Building
+            {t("heroButton")}
           </Link>
           <Link to="/offices" className="underlined-btn">
-            Explore offices
+            {t("heroUnderlined")}
           </Link>
         </div>
       </div>
