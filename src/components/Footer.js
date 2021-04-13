@@ -4,6 +4,7 @@ import { Trans, useTranslation } from 'react-i18next'
 import { Link, withRouter } from 'react-router-dom'
 import FooterContentRow from './FooterContentRow'
 import ScrollAnimation from 'react-animate-on-scroll'
+import AdvLogo from './AdvLogo'
 
 const Footer = (props) => {
   const { t } = useTranslation('footer')
@@ -16,7 +17,6 @@ const Footer = (props) => {
   const pin = './images/map-pin.png'
   return (
     <Container className="footer mw-100 p-0">
-      <div className="footer-adv-logo-cont"></div>
       <div className="d-flex w-100">
         {width > 767 ? (
           <>
@@ -129,6 +129,7 @@ const Footer = (props) => {
           <img src="./images/logo.svg" alt="DRN logo" />
         </Row>
         <FooterContentRow width={width} />
+        <AdvLogo />        
       </Container>
     </Container>
   )
