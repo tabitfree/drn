@@ -94,7 +94,7 @@ const Footer = (props) => {
               href="https://www.google.com/maps/place/N%C3%A1rodn%C3%AD+135,+110+00+Star%C3%A9+M%C4%9Bsto/@50.0815736,14.4152391,17z/data=!3m1!4b1!4m5!3m4!1s0x470b94ee261dac81:0x70493c7cddd71225!8m2!3d50.0815736!4d14.4174278"
               target="_blank"
               className="w-100 footer-map"
-              style={{ height: '300px', background: `url(${contactMap})` }}
+              style={{ height: '385px', background: `url(${contactMap})` }}
             >
               <img className="position-relative" src={pin} alt="map" />
               <div className="map-text">
