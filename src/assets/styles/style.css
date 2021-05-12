@@ -2019,7 +2019,7 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   .community-carousel .card-body {
     height: 100%;
     max-height: 470px !important;
-    min-height: 470px;
+    min-height: 260px;
   }
 }
 

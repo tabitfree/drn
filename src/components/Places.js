@@ -23,7 +23,7 @@ const Places = ({ colors, width }) => {
             <p>{t('losteriaTe')}</p>
             <p>{t('losteriaVisit')} </p>
             <a
-              href="https://www.losteria.net"
+              href="https://www.losteria.net/cz/"
               target="_blank"
               className="btn dark-variant"
             >

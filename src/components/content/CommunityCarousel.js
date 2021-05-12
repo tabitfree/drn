@@ -18,7 +18,7 @@ const CommunityCarousel = (props) => {
     },
     largerMobile: {
       breakpoint: { max: 767, min: 500 },
-      items: 2,
+      items: 1,
     },
     mobile: {
       breakpoint: { max: 500, min: 0 },
