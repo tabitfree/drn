@@ -1701,6 +1701,8 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   }
   .w-100.footer-map {
     padding-top: 4rem;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
   }
   div.map-text {
     position: absolute;

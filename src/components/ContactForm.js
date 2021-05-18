@@ -5,12 +5,13 @@ import { useTranslation, Trans } from 'react-i18next'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 const ContactForm = () => {
-  const { t } = useTranslation('contact')
+  const { t, i18n } = useTranslation('contact')
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [number, setNumber] = useState('')
   const [message, setMessage] = useState('')
   const [showSuccess, setShowSuccess] = useState(false)
+  const curLang = i18n.languages[0];
 
   const onNameChange = (event) => {
     setName(event.target.value)
@@ -33,6 +34,9 @@ const ContactForm = () => {
     setNumber('')
     setMessage('')
   }
+
+  const gdpr = curLang == 'en' ? "./pdfs/en/gdpren.pdf" : "./pdfs/cz/gdprcz.pdf"
+  const privacy = curLang == 'en' ? "./pdfs/en/privacyen.pdf" : "./pdfs/cz/privacycz.pdf"
 
   const submitEmail = (e) => {
     e.preventDefault()
@@ -107,7 +111,11 @@ const ContactForm = () => {
           <Form.Check>
             <Form.Check.Label>
               <Form.Check.Input type="checkbox" required />
-              <Trans>{t('conditions')}</Trans>
+              <Trans>{t('conditions1')}</Trans>
+              <a href={privacy} target="_blank" ><Trans>{t('conditions2')}</Trans></a>
+              <Trans>{t('conditions5')}</Trans>
+              {t('conditions3')}
+              <a href={gdpr} target="_blank"><Trans>{t('conditions4')}</Trans></a>
             </Form.Check.Label>
           </Form.Check>
         </Form.Group>
