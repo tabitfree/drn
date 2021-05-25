@@ -1381,6 +1381,12 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   opacity: 0.4;
 }
 
+.contact-map {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
 /*- Media query ------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 1200px) {
