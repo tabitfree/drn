@@ -38,7 +38,7 @@ const FooterContentRow = ({ width }) => {
                   }}
                 >
                   <Link
-                    to={page == 'Homepage' ? '/' : `/${page.toLowerCase()}`}
+                    to={page=='Contact' || page=='Kontakt' ? `/contact` : page=='Kanceláře' || page == 'Offices' ? '/offices' : page=='Terasa' || page == 'Rooftop' ? '/rooftop' : page=='Budova' || page == 'Building' ? '/building' : '/'}
                     className="mb-0"
                     style={{ color: colors.light }}
                   >
@@ -65,7 +65,7 @@ const FooterContentRow = ({ width }) => {
                   }}
                 >
                   <Link
-                    to={page == 'Homepage' ? '/' : `/${page.toLowerCase()}`}
+                    to={page=='Contact' || page=='Kontakt' ? `/contact` : page=='Kanceláře' || page == 'Offices' ? '/offices' : page=='Terasa' || page == 'Rooftop' ? '/rooftop' : page=='Budova' || page == 'Building' ? '/building' : '/'}
                     className="mb-0"
                     style={{ color: colors.light }}
                   >
@@ -142,7 +142,7 @@ const FooterContentRow = ({ width }) => {
                 }}
               >
                 <Link
-                  to={page == 'Homepage' ? '/' : `/${page.toLowerCase()}`}
+                  to={page=='Contact' || page=='Kontakt' ? `/contact` : page=='Kanceláře' || page == 'Offices' ? '/offices' : page=='Terasa' || page == 'Rooftop' ? '/rooftop' : page=='Budova' || page == 'Building' ? '/building' : '/'}
                   className="mb-0"
                   style={{ color: colors.light }}
                 >

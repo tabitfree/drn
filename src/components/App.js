@@ -48,7 +48,17 @@ const App = () => {
           <Building colors={colors} width={width} />
           {footer}
         </Route>
+        <Route path="/budova">
+          {header}
+          <Building colors={colors} width={width} />
+          {footer}
+        </Route>
         <Route path="/contact">
+          {header}
+          <Contact />
+          {footer}
+        </Route>
+        <Route path="/kontakt">
           {header}
           <Contact />
           {footer}
@@ -64,6 +74,11 @@ const App = () => {
           {footer}
         </Route>
         <Route path="/rooftop">
+          {header}
+          <Rooftop colors={colors} />
+          {footer}
+        </Route>
+        <Route path="/střecha">
           {header}
           <Rooftop colors={colors} />
           {footer}
