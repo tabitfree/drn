@@ -19,8 +19,10 @@
   "conditions4": "<u>GDPR </u>",
   "btn": "Send message",
   "contactsTi": "Key contacts",
-  "contact1Function": "Property Management",
-  "contact2Function": "Asset Management",
+  "contact1Function": "Propety Management",
+  "contact2Function": "Asset & Property Management",
   "contact3Function": "Property Owner",
+  "contact4Function": "Property Management",
+  "contact5Function": "Property Management",
   "messageSent": "Message has been successfully sent! Thank you for contacting us."
 }
