@@ -54,11 +54,6 @@ const ExcellentCommunity = (props) => {
       website: 'www.zdeneksklenar.cz',
     },
     {
-      icon: './images/greengo-logo.png',
-      text: t('greengo'),
-      website: 'www.greengo.com',
-    },
-    {
       icon: './images/urarasku-logo.png',
       text: t('urarasku'),
       website: 'www.urarasku.cz',
@@ -72,15 +67,15 @@ const ExcellentCommunity = (props) => {
 
   return (
     <Container>
-      <div className="w-50">
-        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+      <div className='w-50'>
+        <ScrollAnimation animateIn='fadeInLeft' animateOnce={true}>
           <h2 style={{ color: colors.main }}>{props.title}</h2>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+        <ScrollAnimation animateIn='fadeInRight' animateOnce={true}>
           <p>{props.text}</p>
         </ScrollAnimation>
       </div>
-      <div className="exc-cards-container d-flex flex-wrap">
+      <div className='exc-cards-container d-flex flex-wrap'>
         {cards.map((card, idx) => {
           return (
             <CommunityCarouselItem

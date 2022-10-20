@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
-import { Container } from 'react-bootstrap'
 import colors from '../../assets/styles/colors'
 
 import HPHero from '../hp-components/HPHero'
@@ -13,7 +12,7 @@ import { useTranslation } from 'react-i18next'
 const HomePage = (props) => {
   const { t } = useTranslation('homepage')
   const officesButton = (
-    <Link to="/offices" className="btn dark-variant office-btn">
+    <Link to='/offices' className='btn dark-variant office-btn'>
       {t('heroUnderlined')}
     </Link>
   )
@@ -23,16 +22,16 @@ const HomePage = (props) => {
       <Helmet>
         <title>DRN | Home</title>
       </Helmet>
-      <section className="hero-hp">
+      <section className='hero-hp'>
         <HPHero colors={colors} />
       </section>
-      <section className="offices-hp">
+      <section className='offices-hp'>
         <Offices colors={colors} button={officesButton} width={props.width} />
       </section>
-      <section className="benefits-hp">
+      <section className='benefits-hp'>
         <HPBenefits colors={colors} width={props.width} />
       </section>
-      <section className="community">
+      <section className='community'>
         <Community colors={colors} />
       </section>
     </>

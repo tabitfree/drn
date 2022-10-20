@@ -94,6 +94,27 @@ section {
   position: relative;
 }
 
+.hero-logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid #000;
+  padding-top: 20px;
+}
+
+.hero-logo img {
+  width: 100%;
+  max-width: 100px;
+}
+
+@media (max-width: 500px) {
+  .hero-logo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
+
 .transparent-container {
   z-index: 1;
 }
@@ -116,18 +137,12 @@ a.nav-link::before {
   left: 0;
   visibility: hidden;
   background-color: #ffffff;
-  -webkit-transform: scaleX(0);
-  -ms-transform: scaleX(0);
   transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  -o-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 
 a.nav-link:hover::before {
   visibility: visible;
-  -webkit-transform: scaleX(1);
-  -ms-transform: scaleX(1);
   transform: scaleX(1);
 }
 
@@ -226,16 +241,12 @@ button:not(:disabled) {
 .custom-arrow {
   bottom: 0;
   top: 80%;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
 .office-carousel .react-multiple-carousel__arrow:hover::before,
 .community-carousel .react-multiple-carousel__arrow:hover::before,
 .custom-arrow:hover::before {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
@@ -287,8 +298,6 @@ button:not(:disabled) {
 .btn {
   border-radius: 4px;
   padding: 12px 42px;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   min-width: 184px;
 }
@@ -318,8 +327,6 @@ button:not(:disabled) {
   color: #ffffff;
   border-bottom: 1px solid #ffffff;
   padding-bottom: 3px;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -584,8 +591,6 @@ nav.position-absolute.w-100.navbar.navbar-expand.navbar-light.bg-transparent {
 }
 
 .col-custom {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 35.333333%;
   flex: 0 0 35.333333%;
   max-width: 35.666667%;
 }
@@ -730,8 +735,6 @@ section.sfzone {
   display: inline-block;
   width: 100%;
   max-width: 153px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -773,7 +776,6 @@ section.sfzone {
 }
 
 .unique-cards .card .card-body a {
-  -ms-flex-item-align: end;
   align-self: flex-end;
 }
 
@@ -807,8 +809,6 @@ section.upae h2 {
   margin-bottom: 94px;
 }
 .arch-imgs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -888,8 +888,6 @@ li[data-index='8'] .card-body-com-item img {
 }
 
 a.nav-link.cur-page::before {
-  -webkit-transform: scaleX(1);
-  -ms-transform: scaleX(1);
   transform: scaleX(1);
   visibility: visible !important;
 }
@@ -946,11 +944,7 @@ section.benefits {
   background: #ffffff;
   padding: 7.5px;
   border-radius: 50%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-right: 19px;
 }
@@ -999,8 +993,6 @@ p.small-title {
   height: 21px;
   margin-top: 50%;
   margin-left: 50%;
-  -webkit-transform: translate(-25%, -25%);
-  -ms-transform: translate(-25%, -25%);
   transform: translate(-25%, -25%);
 }
 
@@ -1012,8 +1004,6 @@ p.small-title {
 }
 
 .image-gallery-custom-right-nav:hover {
-  -webkit-transform: scale(1.1) translate(-25%, -25%);
-  -ms-transform: scale(1.1) translate(-25%, -25%);
   transform: scale(1.1) translate(-25%, -25%);
   cursor: pointer;
 }
@@ -1025,8 +1015,6 @@ p.small-title {
   bottom: 0;
   right: 0;
   z-index: 1;
-  -webkit-transform: translateY(100%);
-  -ms-transform: translateY(100%);
   transform: translateY(100%);
 }
 
@@ -1194,22 +1182,17 @@ label.form-label {
 .form-control:focus {
   color: #495057;
   border: 1px solid #171717;
-  -webkit-box-shadow: none;
   box-shadow: none;
   outline: auto;
 }
 
 .navbar-light .navbar-toggler-icon {
   background-image: url('../images/hamburger.svg');
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .navbar-light .expanded-toggler .navbar-toggler-icon {
   background-image: url('../images/cancel.svg');
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -1300,8 +1283,6 @@ p.person-function {
 }
 
 a.w-50.footer-map {
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
@@ -1360,8 +1341,6 @@ div.map-text {
   position: absolute;
   top: 8.5rem;
   left: 25%;
-  -webkit-transform: translate(-50%);
-  -ms-transform: translate(-50%);
   transform: translate(-50%);
 }
 div.map-text p {
@@ -1491,9 +1470,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   }
 
   .offices-hp-inner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -1549,9 +1525,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   }
 
   .container-p-img {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -1575,9 +1548,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   }
 
   .benefits-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -1591,9 +1561,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   }
 
   .bigger-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -1607,12 +1574,7 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   .places-container p,
   .places-container .places-contact {
     margin-bottom: 32px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -1639,9 +1601,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   }
 
   .contact-info .d-flex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -1658,9 +1617,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   }
 
   .contact-info-item.d-flex.align-items-center {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
   .connectivity-wrapper {
@@ -1697,9 +1653,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   }
 
   .footer > a > .d-flex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
   .footer > a > .d-flex > .w-50 {
@@ -1714,8 +1667,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
     position: absolute;
     top: 5rem;
     left: 50%;
-    -webkit-transform: translate(-50%);
-    -ms-transform: translate(-50%);
     transform: translate(-50%);
   }
   div.map-text p {
@@ -1761,9 +1712,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   }
 
   div[title='History and architecture'] div {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -1780,9 +1728,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   }
 
   .sfzone .d-flex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -1844,9 +1789,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   }
 
   .footer > .d-flex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 } /* end of 700 */
@@ -1870,8 +1812,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
     position: absolute;
     left: 0;
     bottom: 0;
-    -webkit-transform: translateY(50%);
-    -ms-transform: translateY(50%);
     transform: translateY(50%);
     margin-left: 15px;
     margin-right: 15px;
@@ -1964,12 +1904,8 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
 @media only screen and (max-width: 420px) {
   .offices-btn-wrap {
     display: block !important;
-    -webkit-box-align: center !important;
-    -ms-flex-align: center !important;
     align-items: center !important;
     text-align: center !important;
-    -webkit-box-pack: center !important;
-    -ms-flex-pack: center !important;
     justify-content: center !important;
   }
   .offices-btn-wrap a {
@@ -2032,9 +1968,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
 }
 
 .advertia-wrap {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   height: 32px;
@@ -2042,21 +1975,12 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
 }
 
 .advertia-wrap--end {
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
 .advertia {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   text-decoration: none;
   margin-bottom: -4px;
@@ -2066,22 +1990,16 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
 
 .advertia:hover .advertia__xoxo {
   opacity: 0;
-  -webkit-transform: translateY(15px);
-  -ms-transform: translateY(15px);
   transform: translateY(15px);
 }
 
 .advertia:hover .advertia__logo svg {
   fill: #fffcf5;
-  -webkit-transform: translateX(var(--translate-y));
-  -ms-transform: translateX(var(--translate-y));
   transform: translateX(var(--translate-y));
 }
 
 .advertia:hover .advertia__title {
   opacity: 1;
-  -webkit-transform: translateX(var(--translate-y));
-  -ms-transform: translateX(var(--translate-y));
   transform: translateX(var(--translate-y));
 }
 
@@ -2103,9 +2021,7 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   font-size: 0.95rem;
   font-weight: 700;
   margin-right: 18px;
-  -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
   transition: opacity 0.4s, transform 0.4s;
 }
 
@@ -2113,18 +2029,14 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   width: 42px;
   height: 30px;
   fill: #00f;
-  -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-transition: fill 0.4s, -webkit-transform 0.4s;
   transition: fill 0.4s, transform 0.4s;
 }
 
 .advertia__title {
   padding-left: 10px;
   opacity: 0;
-  -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
   transition: opacity 0.4s, transform 0.4s;
 }
 
@@ -2132,7 +2044,6 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   width: 55px;
   height: 27px;
   fill: #e6495a;
-  -webkit-transition: fill 0.4s;
   transition: fill 0.4s;
 }
 

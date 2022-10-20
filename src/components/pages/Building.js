@@ -15,7 +15,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 const Building = ({ colors, ...props }) => {
   const { t } = useTranslation('building, homepage')
   const officeButton = (
-    <Link to="/offices" className="btn dark-variant offices-btn">
+    <Link to='/offices' className='btn dark-variant offices-btn'>
       {t('homepage:officesBtn')}
     </Link>
   )
@@ -26,39 +26,40 @@ const Building = ({ colors, ...props }) => {
       <Helmet>
         <title>DRN | Building</title>
       </Helmet>
-      <section className="hero hero-b">
+      <section className='hero hero-b'>
         <Hero
-          type="text"
+          type='text'
           title={t('building:heroTi')}
           text={t('building:heroTe')}
           colors={colors}
+          certificate={true}
         />
       </section>
-      <section className="upae">
+      <section className='upae'>
         <Unique colors={colors} />
       </section>
-      <section className="architecture">
+      <section className='architecture'>
         <Architecture colors={colors} />
       </section>
-      <section className="awards">
-        <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+      <section className='awards'>
+        <ScrollAnimation animateIn='fadeInUp' animateOnce={true}>
           <Awards colors={colors} />
         </ScrollAnimation>
       </section>
-      <section className="about">
+      <section className='about'>
         <About colors={colors} />
       </section>
-      <section className="ex-community" id="community-sec">
+      <section className='ex-community' id='community-sec'>
         <ExcellentCommunity
           title={t('building:excellentCommunityTi')}
           text={t('building:excellentCommunityTe')}
           colors={colors}
         />
       </section>
-      <section className="offices">
+      <section className='offices'>
         <Offices colors={colors} button={officeButton} width={props.width} />
       </section>
-      <section className="community">
+      <section className='community'>
         <Community colors={colors} />
       </section>
     </>
